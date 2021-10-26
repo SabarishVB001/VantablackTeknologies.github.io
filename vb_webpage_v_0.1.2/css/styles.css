@@ -1,0 +1,1048 @@
+
+/*****
+Version : 0.1.1
+Details : CSS code for Vantablack Webpage Template.
+
+
+*****/
+
+/********* General CSS *********/
+
+
+body {
+    color: #666666;
+    background-color: rgb(5, 5, 5);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #121518;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #aa9166;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1566px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+/***** back to top button *****/
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #978222;
+    color: #121518;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #aa9166;
+    background: #121518;
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+
+
+/********** Top Bar CSS ***********/
+
+.top-bar {
+    position: relative;
+    height: 90px;
+    background: rgb(253, 247, 247);
+}
+
+.top-bar .logo {
+    padding: 15px 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.top-bar .logo h1 {
+    margin: 0;
+    color: #aa9166;
+    font-size: 75px;
+    line-height: 55px;
+    font-weight: 800;
+}
+
+.top-bar .logo img {
+    max-width: 100%;
+    max-height: 70px;
+
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90px;
+    padding: 0 20px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .text h2 {
+    color: #0c0b0b;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    margin: 0;
+}
+
+.top-bar .text p {
+    color: #030303;
+    font-size: 13px;
+    margin: 0;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 90px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    font-size: 22px;
+    color: #070606;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+}
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a:hover {
+    color: #aa9166;
+    background:crimson;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .top-bar .logo {
+        text-align: center;
+    }
+    
+    .top-bar .social {
+        display: none;
+    }
+    .top-bar .text {
+        display: none;
+    }
+}
+
+/************* Top bar css end ***********/
+
+/************** Navigation bar css *******/
+
+.nav-bar {
+    position: relative;
+    padding: 20px 0;
+    transition: .3s;
+}
+
+.nav-bar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 999;
+}
+.nav-bar .navbar {
+    height: 100%;
+    padding: 0;
+}
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #aa9166;
+    transition: none;
+}
+
+.nav-bar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+.nav-bar .btn {
+    color: #ffffff;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+}
+
+.nav-bar .btn:hover {
+    background: #aa9166;
+}
+@media (min-width: 992px) {
+    .nav-bar {
+        padding: 20px 60px;
+    }
+    
+    .nav-bar.nav-sticky {
+        padding: 10px 60px;
+    }
+    
+    .nav-bar,
+    .nav-bar .navbar {
+        background: #121518 !important;
+    }
+    
+    .nav-bar .navbar-brand {
+        display: none;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 8px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .nav-bar,
+    .nav-bar .navbar {
+        padding: 3px 0;
+        background: #121518 !important;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 5px;
+    }
+    
+    .nav-bar .dropdown-menu {
+        box-shadow: none;
+    }
+    
+    .nav-bar .btn {
+        display: none;
+    }
+}
+
+/******** Carousel CSS *********/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 170px);
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .carousel-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 170px);
+}
+
+.carousel .carousel-caption h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-caption p {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.carousel .carousel-caption .btn {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    background: #121518;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    transition: .3s;
+}
+
+.carousel .carousel-caption .btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+@media (max-width: 767.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 20px;
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 16px;
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 10px 25px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+/********* Uderline **********/
+
+.section-header .underline_1{
+
+    width: 25%;
+	border: 2px solid #ec2525 ;
+	
+    border-radius: 5px;
+
+}
+
+/********** Fact CSS ***********/
+
+.fact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.fact .fact-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 0 25px 0;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.fact .fact-item:hover {
+    border-color: rgba(0, 0, 0, .1);
+    box-shadow: none;
+}
+
+.fact .fact-item img {
+    max-height: 50px;
+    margin-bottom: 15px;
+}
+
+.fact .fact-item h2 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+
+/**********Services sction header css ****************/
+.section-header .line_1{
+    
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+
+}
+
+.section-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    margin: 0;
+    padding-top: 30px;
+    position: relative;
+    font-size: 80px;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/*
+.section-header h2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 7px;
+    left: 0;
+    bottom: 20px;
+    background: transparent;
+    border-top: 1px solid #ce2a0d;
+    border-bottom: 1px solid #ce2a0d;
+    z-index: -1;
+}*/
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
+
+/**********Services css ****************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #121518;
+    margin-bottom: 30px;
+}
+
+.service .service-icon {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.service .service-icon i {
+    width: 100px;
+    height: 100px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 60px;
+    color: #aa9166;
+    background: #121518;
+    transition: .5s;
+}
+
+.service .service-item:hover .service-icon i {
+    margin-top: -15px;
+}
+
+.service .service-item h3 {
+    margin: 0;
+    padding: 25px 15px 15px 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.service .service-item p {
+    margin: 0;
+    color: #999999;
+    padding: 0 25px 25px 25px;
+    font-size: 18px;
+}
+
+.service .service-item a.btn {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    background: #121518;
+    transition: .3s;
+}
+
+.service .service-item:hover a.btn {
+    color: #121518;
+    background: #aa9166;
+}
+
+
+.service .product-img {
+    position: relative;
+}
+
+.service .product-img img {
+    width: 100%;
+}
+
+/********* Footer CSS **********/
+
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 180px;
+    background: #121518;
+    color: #ffffff;
+}
+
+.footer .footer-about,
+.footer .footer-link,
+.footer .footer-contact {
+    position: relative;
+    margin-bottom: 45px;
+    color:white;
+}
+.footer .footer-about h2,
+.footer .footer-link h2,
+.footer .footer-contact h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #999999;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #aa9166;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #aa9166;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #999999;
+}
+
+.footer .footer-menu .f-menu {
+    position: relative;
+    padding: 15px 0;
+    background: #000000;
+    font-size: 0;
+    text-align: center;
+}
+
+.footer .footer-menu .f-menu a {
+    color: #999999;
+    font-size: 16px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #aa9166;
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.footer .copyright {
+    padding: 30px 15px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #999999;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #aa9166;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/********** About page CSS **********/
+
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.about .section-header {
+    margin-bottom: 30px;
+}
+
+.about .about-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: #121518;
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .about-text p {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.about .title {
+	text-align:center;
+	padding-bottom: 60px;
+}
+.about .title span{
+    color:#070500;
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 20px;
+    }
+
+@media (max-width: 767.98px) {
+    .about .about-img {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+
+/******************** Product Page CSS ********************/
+
+
+.product {
+	background: #fff;
+	padding-top: 60px;
+
+}
+.product .title {
+	text-align:center;
+	padding-bottom: 60px;
+}
+.product .title span{
+    color:#070500;
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+.product .section-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product .product-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    
+}
+
+.product .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product .product-text p {
+    font-size: 18px;
+    text-align:justify;
+}
+
+
+
+/******************** support page ***********************/
+
+.contact .main_form {
+    background: #fff;
+  
+   padding: 40px;
+} 
+
+.form-control {
+    border: #080807 solid 2px;
+    border-radius: inherit;
+    margin-bottom: 30px;
+    padding: 13px 20px;
+    font-family: poppins;
+}
+.form-control:focus {
+    box-shadow: inherit;
+    border: #13110e solid 2px !important;
+}
+
+.textarea {
+    font-family: poppins;
+    border: #0a0a08 solid 2px;
+    margin-bottom: 30px;
+    padding: 13px 20px;
+    width: 100%;
+    padding-top: 40px;
+} 
+
+.send {
+    font-family:Arial, Helvetica, sans-serif;
+   max-width: 212px;
+   margin: 0 auto;
+   display: block;
+   background: #000;
+   color: rgb(233, 147, 19);
+   padding: 12px 0px;
+   width: 100%;
+   font-size: 20px;
+}
+
+.send:hover {
+    background: #c72712bd;
+}
+
+/********Career page ***********/
+
+.career .title {
+	text-align:center;
+	padding-bottom: 60px;
+}
+.career .title span{
+    color:#070500;
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+.benefits-title h2{
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-size:xx-large;
+    color: #f7154e;
+}
+
+.benefits-title hr{
+
+    
+    width: 13%;
+	border: 2px solid #ecce25 ;
+    border-radius: 5px;
+    
+    margin: 30px;
+}
+
+/********** bebefit list css ***********/
+
+.benefits-list {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+.benefits-list .benefits-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 0 25px 0;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.benefits-list .bebefits-item:hover {
+    border-color: rgba(0, 0, 0, .1);
+    box-shadow: none;
+}
+
+.benefits-list .benefits-item img {
+    max-height: 50px;
+    margin-bottom: 15px;
+}
+
+.benefits-list .benefits-item h2 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(5, 5, 5);
+}
+
+/****** openings css **********/
+
+.openings-title h2{
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-size:xx-large;
+    color: #2c15f7;
+}
+
+.openings-title hr{
+
+    
+    width: 12%;
+	border: 2px solid #ecce25 ;
+    border-radius: 5px;
+    
+    margin: 30px;
+}
+
+.openings-list h1{
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-size: 25px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+}
+
+.openings-list p{
+    margin-bottom: 10px;
+    padding-left: 30px;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/*************** Hardware services *************/
+
+
+.hardware-services-section {
+	margin-top: 100px;
+}
+.hardware-services-section .hardware-section-heading span {
+	color: #ce0909;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.hardware-services-section .hardware-section-heading h2 {
+	color: #0f1ea0;
+    margin-bottom: 30px;
+}
+.hardware-services-section .hardware-service-item {
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	padding: 50px 40px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.hardware-services-page .hardware-service-item {
+	margin-bottom: 30px;
+}
+.hardware-services-section .hardware-service-item i {
+	color: #fff;
+	background-color: #5c5edd;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 32px;
+}
+.hardware-services-section .hardware-service-item h4 {
+	margin-top: 35px;
+	font-size: 19px;
+	color: #1e1e1e;
+	text-transform: capitalize;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin-bottom: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*************** Software services *************/
+
+
+.software-services-section {
+	margin-top: 100px;
+}
+.software-services-section .software-section-heading span {
+	color: #ce0909;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.software-services-section .software-section-heading h2 {
+	color: #0f1ea0;
+    margin-bottom: 30px;
+}
+.software-services-section .software-service-item {
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	padding: 50px 40px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.software-services-page .software-service-item {
+	margin-bottom: 30px;
+}
+.software-services-section .software-service-item i {
+	color: #fff;
+	background-color: #5c5edd;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 32px;
+}
+.software-services-section .software-service-item h4 {
+	margin-top: 35px;
+	font-size: 19px;
+	color: #1e1e1e;
+	text-transform: capitalize;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	margin-bottom: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
